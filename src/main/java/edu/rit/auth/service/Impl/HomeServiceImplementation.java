@@ -35,5 +35,10 @@ public class HomeServiceImplementation implements HomeService {
         return "index";
     }
 
-
+    @Override
+    public String get403(){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        LOG.debug("Returning 403 template");
+        return "403";
+    }
 }

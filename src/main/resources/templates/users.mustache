@@ -6,29 +6,31 @@
     {{>partials/head_include}}
 </head>
 <body>
-
-    <div>USERS:</div>
-    <hr>
-    {{#users}}
-        <div class ="user">
-            <b>User ID: </b>{{userId}} <br>
-            <b>Username: </b>{{username}} <br>
-            <b>User Email: </b>{{userEmail}} <br>
-            <b>User Type: </b>{{type}} <br>
-            <b>User permissions: </b> <br>
-            <div class="user-permissions">
-                {{#userPermissions}}
-                    {{.}} <br>
-                {{/userPermissions}}
-            </div>
-        </div>
-        <hr>
-    {{/users}}
-
-    <div>
+    {{>partials/header}}
+    <div class="user-button-wrapper">
         <button onclick="location.href='/'" type="button">
             Back to Home</button>
     </div>
+    <div class="main-users">
+        <div>USERS:</div>
+        <hr>
+        {{#users}}
+            <div class ="user">
+                <b>User ID: </b>{{userId}} <br>
+                <b>Username: </b>{{username}} <br>
+                <b>User Email: </b>{{userEmail}} <br>
+                <b>User Type: </b>{{type}} <br>
+                <b>User permissions: </b> <br>
+                <div class="user-permissions">
+                    {{#userPermissions}}
+                        {{.}} <br>
+                    {{/userPermissions}}
+                </div>
+            </div>
+            <hr>
+        {{/users}}
+    </div>
+
 {{>partials/footer}}
 </body>
 </html>
