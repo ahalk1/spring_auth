@@ -20,4 +20,10 @@ public class HomeController {
        LOG.debug("Getting home page");
        return homeService.getHomePage(model);
     }
+
+    @GetMapping("/403")
+    public String page403(Model model) {
+        LOG.debug("Getting 403 page");
+        return homeService.get403();
+    }
 }
