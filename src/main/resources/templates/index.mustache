@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication and Authorization</title>
+    {{>partials/head_include}}
+</head>
+<body>
+    <div class="message">
+        {{message}}
+    </div>
+
+
+
+
+    <div class="main">
+        <div class="buttons">
+            {{#ADMIN}}
+                <div class="custom-button">
+                    <button onclick="location.href='/users'" type="button">
+                        Manage Users Page</button>
+                </div>
+            {{/ADMIN}}
+
+            {{#ADMIN}}
+                <div class="custom-button">
+                    <button onclick="location.href='/#'" type="button">
+                        Manage students</button>
+            </div>
+            {{/ADMIN}}
+
+            {{#TEACHER}}
+                <div class="custom-button">
+                    <button onclick="location.href='/#'" type="button">
+                        Manage students</button>
+                </div>
+            {{/TEACHER}}
+
+            {{#ADMIN}}
+                <div class="custom-button">
+                    <button onclick="location.href='/#'" type="button">
+                        Manage Courses</button>
+                </div>
+            {{/ADMIN}}
+            {{#TEACHER}}
+                <div class="custom-button">
+                    <button onclick="location.href='/#'" type="button">
+                        Manage Courses</button>
+                </div>
+            {{/TEACHER}}
+            {{#STUDENT}}
+                <div class="custom-button">
+                    <button onclick="location.href='/#'" type="button">
+                        Manage Courses</button>
+                </div>
+            {{/STUDENT}}
+        </div>
+    </div>
+
+    {{>partials/footer}}
+</body>
+</html>
