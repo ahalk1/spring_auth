@@ -1,4 +1,4 @@
-package edu.rit.auth.controller
+package edu.rit.auth.controller;
 
 class CoursesController {
 }
