@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import edu.rit.auth.dao.UserRepository;
+import edu.rit.auth.data.UserType;
 import edu.rit.auth.service.StudentService;
 
 @Service
@@ -20,7 +21,7 @@ public class StudentServiceImplementation implements StudentService {
     @Override
     public String getStudentPage(Model model) {
         LOG.debug("Returning students template");
-        model.addAttribute("students", userRepository.findAll());
+        model.addAttribute("students", userRepository.findByType(UserType.STUDENT));
         return "students";
     }
     
