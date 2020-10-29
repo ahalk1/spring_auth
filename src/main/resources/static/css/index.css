@@ -1,10 +1,51 @@
 @import url("homePage.css");
 @import url("userPage.css");
+@import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
+@import url("page403.css");
 
+.fixed-top{
+    background-color: #0a1c2e;
+}
 
-footer{
-    background: brown;
-    padding: 1rem;
-    margin-top: 2rem;
-    color:white;
+.fixed-top a{
+    color:white!important;
+}
+
+.fixed-top a:hover{
+    background-color:  #6c6d83;
+}
+
+.fixed-top strong {
+    color: #f2ff49;
+}
+
+footer a:hover{
+    text-decoration:none;
+}
+footer .section-padding {
+    padding: 50px 0;
+}
+footer .bottom {
+    background-color: #0a1c2e;
+}
+footer .bottom .copyright {
+    color: #e5e5e5;
+    font-weight: 600;
+}
+footer .copyright a {
+    color: #f2ff49;
+    margin-left: 3px;
+    padding-right: 3px;
+}
+footer .bottom p {
+    margin-bottom: 0;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+}
+footer .copyright p span {
+    color: #d1caca;
+}
+footer .bottom .copyright p, .bottom .copyright a:hover{
+    color: #6c6d83;
 }

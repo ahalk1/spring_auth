@@ -6,14 +6,21 @@
     {{>partials/head_include}}
 </head>
     <body>
-        <div class="logout-button">
-            <button onclick="location.href='/'" type="button">
-                Go to Home Page</button>
+    {{>partials/header}}
+
+    <div class="main-wrapper-403">
+        <div class="box">
+            <h2>403</h2>
+            <p>Not authorized to view resource</p>
         </div>
 
-        <div class="main">
-            403 - Unauthorized to access resource
+
+        <div class="btn btn--secondary">
+            <button onclick="location.href='/'" type="button" class="btn__content">
+                Go to Home Page</button>
         </div>
+    </div>
+
 
         {{>partials/footer}}
     </body>
