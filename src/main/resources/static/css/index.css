@@ -1,0 +1,10 @@
+@import url("homePage.css");
+@import url("userPage.css");
+
+
+footer{
+    background: brown;
+    padding: 1rem;
+    margin-top: 2rem;
+    color:white;
+}

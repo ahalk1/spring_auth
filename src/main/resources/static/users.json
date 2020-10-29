@@ -1,0 +1,24 @@
+[{
+  "userId": "9b1cd0b7-03b1-4d66-92f5-296a5e2ee092",
+  "username": "mike",
+  "userEmail": "mike@example.com",
+  "userPassword": "password",
+  "type": "ADMIN",
+  "userPermissions": ["VIEW_COURSES", "MANAGE_COURSES","VIEW_USERS", "MANAGE_USERS"]
+},
+  {
+    "userId": "03aa1462-ffa9-4978-901b-7c001562cf6f",
+    "username": "tj",
+    "userEmail": "tj@example.com",
+    "userPassword": "password2",
+    "type": "STUDENT",
+    "userPermissions": ["VIEW_COURSES"]
+  },
+  {
+    "userId": "62c1084e-6e34-4630-93fd-9153afb65309",
+    "username": "ahmed",
+    "userEmail": "ahmed@example.com",
+    "userPassword": "password3",
+    "type": "TEACHER",
+    "userPermissions": ["VIEW_COURSES", "MANAGE_COURSES"]
+  }]
