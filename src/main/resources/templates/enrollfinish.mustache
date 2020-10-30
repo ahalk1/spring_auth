@@ -7,12 +7,23 @@
 </head>
 <body>
     {{>partials/header}}
-    <div class="message">
-        {{message}}
-    </div>
-    <div class="user-button-wrapper">
-        <button onclick="location.href='/'" type="button">
-            Back to Home</button>
+<!--    <div class="message">-->
+<!--        {{message}}-->
+<!--    </div>-->
+
+
+
+    <div class="main">
+        <div class="jumbotron">
+            <p class="lead">{{message}}</p>
+            <hr class="my-4">
+            <div class="user-button-wrapper">
+                <button onclick="location.href='/'" type="button">
+                    Back to Home</button>
+            </div>
+        </div>
+
+
     </div>
     {{>partials/footer}}
 </body>

@@ -1,0 +1,20 @@
+
+.enroll-btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enroll-btn-wrapper button{
+    width: 120px;
+    cursor: pointer;
+    background-color: #ee0237;
+    color: #fafafa;
+    border: none;
+    border-radius: 6px;
+    font-family: Tomorrow, sans-serif;
+}
+
+.enroll-btn-wrapper button:hover{
+    background-color: #ba0030;
+}
