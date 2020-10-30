@@ -1,15 +1,21 @@
 [{
-  "courseId": "123",
+  "courseId": "SWEN755",
   "courseName": "Software Architecture",
   "teacher" : "ahmed",
   "students" : []
 },
 {
-  "courseId": "124",
+  "courseId": "123",
   "courseName": "Software Quaility",
   "teacher" : "bob",
   "students" : []
 },
+  {
+    "courseId": "SWEN799",
+    "courseName": "Independent Study ",
+    "teacher" : "sultan",
+    "students" : []
+  },
 {
   "courseId": "125",
   "courseName": "Software Foundations",
