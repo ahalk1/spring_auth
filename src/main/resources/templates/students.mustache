@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication and Authorization</title>
+    {{>partials/head_include}}
+</head>
+<body>
+    {{>partials/header}}
+    <div class="user-button-wrapper">
+        <button onclick="location.href='/'" type="button">
+            Back to Home</button>
+    </div>
+    <div class="main-users">
+        <div>Students:</div>
+        <hr>
+        {{#students}}
+            <div class ="user">
+                <b>User ID: </b>{{userId}} <br>
+                <b>Username: </b>{{username}} <br>
+                <b>User Email: </b>{{userEmail}} <br>
+                <b>User Type: </b>{{type}} <br>
+            </div>
+            {{#ADMIN}}
+            <div>
+                <button onclick="location.href='/enrolladmin?sid={{userId}}'" type="button">
+                    Enroll
+                </button>
+            </div>
+            {{/ADMIN}}
+            {{#TEACHER}}
+            <div>
+                <button onclick="location.href='/enrollteacher?sid={{userId}}'" type="button">
+                    Enroll
+                </button>
+            </div>
+            {{/TEACHER}}
+            <hr>
+        {{/students}}
+    </div>
+
+{{>partials/footer}}
+</body>
+</html>

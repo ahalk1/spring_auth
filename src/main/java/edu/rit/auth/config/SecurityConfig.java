@@ -33,6 +33,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/users").hasAnyAuthority("ADMIN")
+                .antMatchers("/students").hasAnyAuthority("ADMIN", "TEACHER")
+                .antMatchers("/enrolladmin").hasAnyAuthority("ADMIN")
+                .antMatchers("/enrollteacher").hasAnyAuthority("TEACHER")
+                .antMatchers("/enrollfinish").hasAnyAuthority("ADMIN", "TEACHER")
                 .anyRequest().authenticated()
                 .and().formLogin().permitAll()
                 .and().logout().invalidateHttpSession(true).clearAuthentication(true).logoutRequestMatcher(new AntPathRequestMatcher("/logout"))

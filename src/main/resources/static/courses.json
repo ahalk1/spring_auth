@@ -1,4 +1,18 @@
 [{
   "courseId": "123",
-  "courseName": "Software Architecture"
+  "courseName": "Software Architecture",
+  "teacher" : "ahmed",
+  "students" : []
+},
+{
+  "courseId": "124",
+  "courseName": "Software Quaility",
+  "teacher" : "bob",
+  "students" : []
+},
+{
+  "courseId": "125",
+  "courseName": "Software Foundations",
+  "teacher" : "ahmed",
+  "students" : []
 }]
