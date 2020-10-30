@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication and Authorization</title>
+    {{>partials/head_include}}
+</head>
+<body>
+    {{>partials/header}}
+    <div class="user-button-wrapper">
+        <button onclick="location.href='/'" type="button">
+            Back to Home</button>
+    </div>
+        <div class="main-users">
+        <div>Course:</div>
+        <hr>
+        {{#courses}}
+            <div class ="user">
+                <b>Course Id: </b>{{courseId}} <br>
+                <b>Course Name: </b>{{courseName}} <br>
+                <b>Teacher: </b>{{teacher}} <br>
+                <div class="user-permissions">
+                    {{#students}}
+                        {{.}} <br>
+                    {{/students}}
+                </div>
+            </div>
+            <div>
+                <button onclick="location.href='/enrollfinish?sid={{sid}}&cid={{courseId}}'" type="button">
+                    Enroll
+                </button>
+            </div>
+            <hr>
+        {{/courses}}
+    </div>
+
+{{>partials/footer}}
+</body>
+</html>

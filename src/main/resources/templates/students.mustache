@@ -20,13 +20,21 @@
                 <b>Username: </b>{{username}} <br>
                 <b>User Email: </b>{{userEmail}} <br>
                 <b>User Type: </b>{{type}} <br>
-                <b>User permissions: </b> <br>
-                <div class="user-permissions">
-                    {{#userPermissions}}
-                        {{.}} <br>
-                    {{/userPermissions}}
-                </div>
             </div>
+            {{#ADMIN}}
+            <div>
+                <button onclick="location.href='/enrolladmin?sid={{userId}}'" type="button">
+                    Enroll
+                </button>
+            </div>
+            {{/ADMIN}}
+            {{#TEACHER}}
+            <div>
+                <button onclick="location.href='/enrollteacher?sid={{userId}}'" type="button">
+                    Enroll
+                </button>
+            </div>
+            {{/TEACHER}}
             <hr>
         {{/students}}
     </div>
