@@ -21,4 +21,12 @@
     "userPassword": "password3",
     "type": "TEACHER",
     "userPermissions": ["VIEW_COURSES", "MANAGE_COURSES"]
+  },
+  {
+    "userId": "99c2284e-6e34-4935-93fd-9153afb65311",
+    "username": "sultan",
+    "userEmail": "sultan@example.com",
+    "userPassword": "password4",
+    "type": "TEACHER",
+    "userPermissions": ["VIEW_COURSES", "MANAGE_COURSES"]
   }]

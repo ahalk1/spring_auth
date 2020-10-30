@@ -33,13 +33,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/users").hasAnyAuthority("ADMIN")
+                .antMatchers("/course").permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin().permitAll()
                 .and().logout().invalidateHttpSession(true).clearAuthentication(true).logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/login").permitAll()
                 .and()
                 .exceptionHandling().accessDeniedPage("/403");
-        http.csrf().disable();
+
+
     }
 
     @Override

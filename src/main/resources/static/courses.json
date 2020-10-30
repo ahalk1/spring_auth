@@ -1,4 +1,16 @@
 [{
-  "courseId": "123",
+  "courseId": "SWEN755",
   "courseName": "Software Architecture"
+},
+  {
+  "courseId": "SWEN610",
+  "courseName": " Foundation of Software Engineering"
+},
+  {
+  "courseId": "SWEN732",
+  "courseName": "Collaborative Software Development"
+},
+  {
+  "courseId": "SWEN799",
+  "courseName": "Dependent Study"
 }]
