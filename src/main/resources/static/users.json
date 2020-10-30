@@ -37,6 +37,6 @@
     "userPassword": "password4",
     "type": "TEACHER",
     "userPermissions": ["VIEW_COURSES", "MANAGE_COURSES"]
-  },
+  }
 
 ]
