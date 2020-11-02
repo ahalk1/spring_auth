@@ -2,7 +2,7 @@
   "userId": "9b1cd0b7-03b1-4d66-92f5-296a5e2ee092",
   "username": "mike",
   "userEmail": "mike@example.com",
-  "userPassword": "password",
+  "userPassword": "$2a$10$HVuoL0b6AMk2XS3hS4QEhOKXM3aRQJdDNkcbdfyYASbc.L9SLRxoa",
   "type": "ADMIN",
   "userPermissions": ["VIEW_COURSES", "MANAGE_COURSES","VIEW_USERS", "MANAGE_USERS"]
 },
@@ -10,7 +10,7 @@
     "userId": "03aa1462-ffa9-4978-901b-7c001562cf6f",
     "username": "tj",
     "userEmail": "tj@example.com",
-    "userPassword": "password2",
+    "userPassword": "$2a$10$HVuoL0b6AMk2XS3hS4QEhOKXM3aRQJdDNkcbdfyYASbc.L9SLRxoa",
     "type": "STUDENT",
     "userPermissions": ["VIEW_COURSES"]
   },
@@ -18,7 +18,7 @@
     "userId": "62c1084e-6e34-4630-93fd-9153afb65309",
     "username": "ahmed",
     "userEmail": "ahmed@example.com",
-    "userPassword": "password3",
+    "userPassword": "$2a$10$HVuoL0b6AMk2XS3hS4QEhOKXM3aRQJdDNkcbdfyYASbc.L9SLRxoa",
     "type": "TEACHER",
     "userPermissions": ["VIEW_COURSES", "MANAGE_COURSES"]
   },
@@ -26,7 +26,7 @@
     "userId": "99c2284e-6e34-4935-93fd-9153afb65311",
     "username": "sultan",
     "userEmail": "sultan@example.com",
-    "userPassword": "pass",
+    "userPassword": "$2a$10$HVuoL0b6AMk2XS3hS4QEhOKXM3aRQJdDNkcbdfyYASbc.L9SLRxoa",
     "type": "TEACHER",
     "userPermissions": ["VIEW_COURSES", "MANAGE_COURSES"]
   },
@@ -34,7 +34,7 @@
     "userId": "52c1084e-6e34-4630-93fd-9153afb65309",
     "username": "bob",
     "userEmail": "bob@example.com",
-    "userPassword": "password4",
+    "userPassword": "$2a$10$HVuoL0b6AMk2XS3hS4QEhOKXM3aRQJdDNkcbdfyYASbc.L9SLRxoa",
     "type": "TEACHER",
     "userPermissions": ["VIEW_COURSES", "MANAGE_COURSES"]
   }
