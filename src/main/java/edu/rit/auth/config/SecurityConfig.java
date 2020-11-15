@@ -50,7 +50,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().invalidSessionUrl("/login");
         http.sessionManagement()
                 .sessionFixation().migrateSession();
-
     }
 
     @Override
