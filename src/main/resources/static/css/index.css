@@ -51,3 +51,14 @@ footer .copyright p span {
 footer .bottom .copyright p, .bottom .copyright a:hover{
     color: #6c6d83;
 }
+
+.refresh-button{
+    width: 175px;
+    height: 50px;
+    background-color: #ff003c!important;
+    border: none!important;
+}
+
+.refresh-button:hover{
+    background-color: #CC0030!important;
+}
