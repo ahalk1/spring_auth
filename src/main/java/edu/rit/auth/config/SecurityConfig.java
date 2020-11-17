@@ -36,8 +36,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/enrolladmin").hasAnyAuthority("ADMIN")
                 .antMatchers("/enrollteacher").hasAnyAuthority("TEACHER")
                 .antMatchers("/enrollfinish").hasAnyAuthority("ADMIN", "TEACHER")
+                .antMatchers("/login*").permitAll()
                 .anyRequest().authenticated()
-                .and().formLogin().permitAll()
+                .and().formLogin().loginPage("/login").permitAll()
                 .and().logout().invalidateHttpSession(true).clearAuthentication(true).logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/login").permitAll()
                 .and()
@@ -47,7 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.ALWAYS);
-        http.sessionManagement().invalidSessionUrl("/login");
+        http.sessionManagement().invalidSessionUrl("/login?timeout");
         http.sessionManagement()
                 .sessionFixation().migrateSession();
     }

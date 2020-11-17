@@ -9,19 +9,21 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
-import java.security.Principal;
 import java.util.ArrayList;
-import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 @Service
 public class HomeServiceImplementation implements HomeService {
     private static final Logger LOG = LoggerFactory.getLogger(HomeServiceImplementation.class);
 
     @Override
-    public String getHomePage(Model model){
+    public String getHomePage(Model model, HttpSession session){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
         LOG.debug("Returning home template");
+
+        session.setAttribute("name", auth.getName());
 
         //Message
         String content = "Welcome: " + auth.getName() + " - " + auth.getAuthorities();
@@ -37,7 +39,6 @@ public class HomeServiceImplementation implements HomeService {
 
     @Override
     public String get403(){
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         LOG.debug("Returning 403 template");
         return "403";
     }

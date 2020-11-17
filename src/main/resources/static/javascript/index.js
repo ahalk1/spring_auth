@@ -21,7 +21,7 @@ function idleLogout() {
                 });
                 //redirect to home
                 console.log("whaat");
-                window.location.replace("/login");
+                window.location.replace("/login?timeout");
             }
         },1000);
     }
