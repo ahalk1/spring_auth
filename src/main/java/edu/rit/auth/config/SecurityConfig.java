@@ -51,6 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().invalidSessionUrl("/login?timeout");
         http.sessionManagement()
                 .sessionFixation().migrateSession();
+                
     }
 
     @Override

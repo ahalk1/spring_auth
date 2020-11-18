@@ -47,3 +47,13 @@ function idleLogout() {
 //Redirect to login after the session expires
 idleLogout();
 
+
+window.addEventListener('unload', function(event) {
+    console.log('I am the one.');
+    $.ajax({
+        type: "POST",
+        url: "/login",
+        data: { name: "Ahmed"} // parameters
+    })
+});
+
