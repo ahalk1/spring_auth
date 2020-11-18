@@ -16,14 +16,25 @@ import javax.servlet.http.HttpSession;
 @Service
 public class HomeServiceImplementation implements HomeService {
     private static final Logger LOG = LoggerFactory.getLogger(HomeServiceImplementation.class);
+    private static int authrty = 0;
 
     @Override
     public String getHomePage(Model model, HttpSession session){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
         LOG.debug("Returning home template");
+        if (session.getAttribute("name") == null && authrty ==2) {
 
+
+            HttpSession httpSession = session;
+            httpSession.invalidate();
+            return "redirect:/";
+
+        }
         session.setAttribute("name", auth.getName());
+        authrty++;
+        System.out.println(authrty + " @@");
+
 
         //Message
         String content = "Welcome: " + auth.getName() + " - " + auth.getAuthorities();
@@ -34,6 +45,7 @@ public class HomeServiceImplementation implements HomeService {
         String role = listAuthorities.remove(0).toString();
 
         model.addAttribute(role, role);
+
         return "index";
     }
 
