@@ -4,24 +4,7 @@
     <meta charset="UTF-8">
     <title>Authentication and Authorization</title>
     {{>partials/head_include}}
-    <script>
-      window.addEventListener('beforeunload', function(event) {
-        console.log('I am the one.');
-        $.ajax({
-             type: "POST",
-             url: "/",
-             data: { name: "John"} // parameters
-        })
-      });
-      window.addEventListener('unload', function(event) {
-        console.log('I am the one.');
-        $.ajax({
-             type: "POST",
-             url: "/login",
-             data: { name: "Ahmed"} // parameters
-        })
-      });
-    </script>
+    
 </head>
 <body>
     {{>partials/header}}

@@ -23,14 +23,7 @@ public class HomeServiceImplementation implements HomeService {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
         LOG.debug("Returning home template");
-        if (session.getAttribute("name") == null && authrty ==2) {
 
-
-            HttpSession httpSession = session;
-            httpSession.invalidate();
-            return "redirect:/";
-
-        }
         session.setAttribute("name", auth.getName());
         authrty++;
         System.out.println(authrty + " @@");
